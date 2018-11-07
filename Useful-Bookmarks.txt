@@ -4,12 +4,13 @@ Training, Labs and Tools list
 Kubernets/Container:
 
 https://github.com/kelseyhightower/kubernetes-the-hard-way
-Install 'Docker Tutorial' Mobile App on Andorid Play Store
+Install 'Docker Tutorial' Mobile App on Android Play Store
+QuickGuide https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeexamples/Docker/example-centos-build.txt
 
 OpenStack:
 
 https://docs.openstack.org/rocky/
-CoreOs Documentation 
+CoreOs Documentation https://coreos.com/tectonic/docs/latest/tutorials/sandbox/monitoring.html
 
 General DevOps:
 
