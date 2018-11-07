@@ -1,0 +1,35 @@
+1. Install Docker on your laptop via Download for Linux from Docker Website or Windows or Mac Install application
+
+2.docker -v
+to check installation has worked
+
+Create Docker Hub login at https://hub.docker.com, so you can download/upload docker images
+
+3.sudo docker pull centos:7
+-Download Vanilla Docker Build. You must be root or sudo user
+
+4.sudo docker run -it --name centos-container1 centos:7
+-Run the freshed downloaded container Image. and login interactivly to make changes
+
+5.Make some changes to the conainer like adding new rpm's or create new users and ssh keys
+yum install epel-release htop iotop iftop vim sudo tux bin-utils
+
+6.sudo docker commit centos-container1 centos-base-tools
+- commit the changes to the new imagefile 'centos-base-tools'
+
+7. Unload the new docker image and sahre on Docker Hub
+sudo docker tag centos-base-tools $DOCKER_ID_USER/centos-base-tools
+sudo docker push sosc/docker-centos/centos-base-tools
+
+Useful:
+
+'docker stats' shows all running dokcer containers and what resources they are consuming
+
+CONTAINER           CPU %               MEM USAGE / LIMIT       MEM %               NET I/O             BLOCK I/O           PIDS
+c8d9c82f1481        0.00%               6.898 MiB / 7.492 GiB   0.09%               261 kB / 1.78 kB    1.03 MB / 868 kB    5
+06df86ad3f3e        0.01%               14.01 MiB / 7.492 GiB   0.18%               307 kB / 101 kB     0 B / 0 B           7
+
+
+If you want to start docker and force it use forward ports external to insternal:
+docker run -p 8080:80 sosc/centos-base-apache /usr/sbin/httpd -D FOREGROUND
+
