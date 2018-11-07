@@ -1,4 +1,5 @@
 Training, Labs and Tools list
+-----------------------------
 
 
 Kubernets/Container:
@@ -12,6 +13,12 @@ OpenStack:
 https://docs.openstack.org/rocky/
 CoreOs Documentation https://coreos.com/tectonic/docs/latest/tutorials/sandbox/monitoring.html
 
+
+CI/CD:
+
+Jenkins in 5 Minutes !?  https://www.soscgroup.com/?p=173
+
+
 General DevOps:
 
 https://github.com/Artemmkin/infrastructure-as-code-tutorial
@@ -24,4 +31,3 @@ Security:
 
 https://www.fail2ban.org/wiki/index.php/Main_Page
 https://letsencrypt.org/
-
