@@ -3,20 +3,23 @@ Training, Labs and Tools list
 
 Kubernets/Container:
 
-https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster
-
+https://github.com/kelseyhightower/kubernetes-the-hard-way
+Install 'Docker Tutorial' Mobile App on Andorid Play Store
 
 OpenStack:
 
 https://docs.openstack.org/rocky/
-
+CoreOs Documentation 
 
 General DevOps:
 
 https://github.com/Artemmkin/infrastructure-as-code-tutorial
 https://www.katacoda.com/learn
+Install Oreilly 'Safari Queue' Mobile Phone App for Books via Android Play Store
+https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/src/4b3b66fb107e117efd109272860f84b098a12a52/Books/?at=master
 
-Security
+
+Security:
 
 https://www.fail2ban.org/wiki/index.php/Main_Page
 https://letsencrypt.org/
