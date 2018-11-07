@@ -11,7 +11,7 @@ Create Docker Hub login at https://hub.docker.com, so you can download/upload do
 4.sudo docker run -it --name centos-container1 centos:7
 -Run the freshed downloaded container Image. and login interactivly to make changes
 
-5.Make some changes to the conainer like adding new rpm's or create new users and ssh keys
+5.Make some changes to the container like adding new rpm's or create new users and ssh keys
 yum install epel-release htop iotop iftop vim sudo tux bin-utils
 
 6.sudo docker commit centos-container1 centos-base-tools
