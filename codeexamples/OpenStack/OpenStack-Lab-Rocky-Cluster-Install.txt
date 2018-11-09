@@ -1,0 +1,455 @@
+Notes created during install of OpenStack Lab 'Rocky version' From:
+ttps://wiki.openstack.org/wiki/Documentation/training-labs#Building_the_cluster
+
+1.Download the Lab .targz file to build an virtualbox disk for lab cluster
+(This is for Rocky- current Stable release as of Nov 18)
+
+run  ./st.py -b cluster
+
+This downloads at Ubuntu 1804 .vdi file and starts cluster using various instakk scripts
+Takes at least 15 mins
+
+
+This takes some time. Recomend to have Laptop with at least 6GB ( or it will swap like mad)
+10GB of Disk is used to build server and 1 Core
+
+You will then be able to ssh to the headless cluster server
+
+INFO	Downloading
+	http://cdimage.ubuntu.com/releases/18.04/release/ubuntu-18.04.1-server-amd64.iso
+	to /home/smitch/VirtualBox VMs/openstack/labs/img/ubuntu-18.04.1-server-amd64.iso
+INFO	This may take a while.
+INFO	Download succeeded.
+INFO	Install ISO:
+	/home/smitch/VirtualBox VMs/openstack/labs/img/ubuntu-18.04.1-server-amd64.iso
+INFO	Asked to delete VM base 
+INFO		not found
+INFO	Created VM base.
+INFO	Attaching DVD to VM base:
+	/home/smitch/VirtualBox VMs/openstack/labs/img/ubuntu-18.04.1-server-amd64.iso
+INFO	Creating disk (size: 10000 MB):
+	/home/smitch/VirtualBox VMs/openstack/labs/img/tmp-disk.vdi
+INFO	Attaching disk to VM base:
+	/home/smitch/VirtualBox VMs/openstack/labs/img/tmp-disk.vdi
+INFO		base_fixups.sh -> 00_base_fixups.sh
+INFO		apt_init.sh -> 01_apt_init.sh
+INFO		apt_upgrade.sh -> 02_apt_upgrade.sh
+INFO		pre-download.sh -> 03_pre-download.sh
+INFO		apt_pre-download.sh -> 04_apt_pre-download.sh
+INFO		enable_osbash_ssh_keys.sh -> 05_enable_osbash_ssh_keys.sh
+INFO		zero_empty.sh -> 06_zero_empty.sh
+INFO		shutdown.sh -> 07_shutdown.sh
+INFO	Booting VM base.
+INFO	Starting VM base with headless GUI
+INFO	Waiting 10 seconds for VM base to come up.
+WARNING	Adjusting permissions for key file (0400):
+	/home/smitch/VirtualBox VMs/openstack/labs/lib/osbash-ssh-keys/osbash_key
+......................... Aprox 5 mins
+.INFO	    Connected to ssh server.
+...INFO	Start autostart/00_base_fixups.sh
+.INFO	  done
+INFO	Start autostart/01_apt_init.sh
+........................INFO	  done
+INFO	Start autostart/02_apt_upgrade.sh
+...............................................................................................................................................INFO	  done
+.INFO	Start autostart/03_pre-download.sh
+............INFO	  done
+.INFO	Start autostart/04_apt_pre-download.sh
+...........................................................................................................INFO	  done
+INFO	Start autostart/05_enable_osbash_ssh_keys.sh
+INFO	  done
+.INFO	Start autostart/06_zero_empty.sh
+..........INFO	  done
+.INFO	Start autostart/07_shutdown.sh
+..INFO	  done
+INFO	Processing of scripts successful.
+INFO	Waiting for shutdown of VM base.
+.INFO	Machine powered off.
+INFO	Detaching disk from VM base.
+INFO	Unregistering and deleting VM: base
+INFO	Compacting /home/smitch/VirtualBox VMs/openstack/labs/img/tmp-disk.vdi.
+INFO	Unregistering disk
+	/home/smitch/VirtualBox VMs/openstack/labs/img/tmp-disk.vdi
+INFO	Base disk created.
+INFO	Moving base disk to:
+	/home/smitch/VirtualBox VMs/openstack/labs/img/base-ssh-rocky-ubuntu-18.04-amd64.vdi
+INFO	Base disk build ends.
+INFO	Basedisk build took 920 seconds
+INFO	Creating mgmt network: 10.0.0.0.
+INFO	Creating host-only interface.
+INFO	Configuring host-only network mgmt with gw address 10.0.0.1 (vboxnet0).
+INFO	Creating provider network: 203.0.113.0.
+INFO	Creating host-only interface.
+INFO	Configuring host-only network provider with gw address 203.0.113.1 (vboxnet1).
+INFO	Asked to delete VM controller 
+INFO		not found
+INFO	Created VM controller.
+INFO	Attaching to VM controller (multi):
+	/home/smitch/VirtualBox VMs/openstack/labs/img/base-ssh-rocky-ubuntu-18.04-amd64.vdi
+INFO	Node controller created.
+INFO		init_xxx_node.sh -> 00_init_controller_node.sh
+INFO		etc_hosts.sh -> 01_etc_hosts.sh
+INFO		enable_osbash_ssh_keys.sh -> 02_enable_osbash_ssh_keys.sh
+INFO		copy_openrc.sh -> 03_copy_openrc.sh
+INFO		apt_install_mysql.sh -> 04_apt_install_mysql.sh
+INFO		install_rabbitmq.sh -> 05_install_rabbitmq.sh
+INFO		install_memcached.sh -> 06_install_memcached.sh
+INFO		setup_keystone.sh -> 07_setup_keystone.sh
+INFO		get_auth_token.sh -> 08_get_auth_token.sh
+INFO		setup_glance.sh -> 09_setup_glance.sh
+INFO		setup_nova_controller.sh -> 10_setup_nova_controller.sh
+INFO		setup_neutron_controller.sh -> 11_setup_neutron_controller.sh
+INFO		setup_self-service_controller.sh -> 12_setup_self-service_controller.sh
+INFO		setup_neutron_controller_part_2.sh -> 13_setup_neutron_controller_part_2.sh
+INFO		setup_horizon.sh -> 14_setup_horizon.sh
+INFO		setup_cinder_controller.sh -> 15_setup_cinder_controller.sh
+INFO		setup_heat_controller.sh -> 16_setup_heat_controller.sh
+INFO	Starting VM controller with headless GUI
+.INFO	Waiting for ssh server in VM controller to respond at 127.0.0.1:2230.
+..................INFO	    Connected to ssh server.
+...INFO	Start autostart/00_init_controller_node.sh
+.INFO	  done
+.INFO	Start autostart/01_etc_hosts.sh
+INFO	  done
+.INFO	Start autostart/02_enable_osbash_ssh_keys.sh
+INFO	  done
+.INFO	Start autostart/03_copy_openrc.sh
+INFO	  done
+.INFO	Start autostart/04_apt_install_mysql.sh
+...............................INFO	  done
+.INFO	Start autostart/05_install_rabbitmq.sh
+....................INFO	  done
+INFO	Start autostart/06_install_memcached.sh
+.....INFO	  done
+.INFO	Start autostart/07_setup_keystone.sh
+..........................................................INFO	  done
+INFO	Start autostart/08_get_auth_token.sh
+....INFO	  done
+INFO	Start autostart/09_setup_glance.sh
+................................................................................INFO 
+
+Setup Nova_controller
+Another Six Minutes here
+
+.INFO	Start autostart/10_setup_nova_controller.sh
+.......................................................................................................................................................................................................^[[...................................INFO	  done
+.INFO	Start autostart/11_setup_neutron_controller.sh
+.................INFO	  done
+INFO	Start autostart/12_setup_self-service_controller.sh
+...................................................INFO	  done
+..INFO	Start autostart/13_setup_neutron_controller_part_2.sh
+...............................................INFO	  done
+.INFO	Start autostart/14_setup_horizon.sh
+......................................................................................................INFO	  done
+.INFO	Start autostart/15_setup_cinder_controller.sh
+...................................................................INFO	  done
+.INFO	Start autostart/16_setup_heat_controller.sh
+..................................................................................INFO	  done
+INFO	Processing of scripts successful.
+INFO	Asked to delete VM compute1 
+INFO		not found
+INFO	Created VM compute1.
+INFO	Attaching to VM compute1 (multi):
+	/home/smitch/VirtualBox VMs/openstack/labs/img/base-ssh-rocky-ubuntu-18.04-amd64.vdi
+INFO	Creating disk (size: 1280 MB):
+	/home/smitch/VirtualBox VMs/openstack/labs/img/compute1-sdb.vdi
+INFO	Attaching disk to VM compute1:
+	/home/smitch/VirtualBox VMs/openstack/labs/img/compute1-sdb.vdi
+INFO	Node compute1 created.
+INFO		init_xxx_node.sh -> 00_init_compute1_node.sh
+INFO		etc_hosts.sh -> 01_etc_hosts.sh
+INFO		enable_osbash_ssh_keys.sh -> 02_enable_osbash_ssh_keys.sh
+INFO		copy_openrc.sh -> 03_copy_openrc.sh
+INFO		setup_nova_compute.sh -> 04_setup_nova_compute.sh
+INFO		setup_neutron_compute.sh -> 05_setup_neutron_compute.sh
+INFO		setup_self-service_compute.sh -> 06_setup_self-service_compute.sh
+INFO		setup_neutron_compute_part_2.sh -> 07_setup_neutron_compute_part_2.sh
+INFO		setup_cinder_volumes.sh -> 08_setup_cinder_volumes.sh
+INFO	Starting VM compute1 with headless GUI
+.INFO	Waiting for ssh server in VM compute1 to respond at 127.0.0.1:2232.
+......................INFO	    Connected to ssh server.
+...INFO	Start autostart/00_init_compute1_node.sh
+.INFO	  done
+
+
+
+ERROR	vm_ssh: Aborting.
+Traceback (most recent call last):
+  File "/home/smitch/VirtualBox VMs/openstack/labs/stacktrain/core/ssh.py", line 124, in vm_ssh
+    stderr=subprocess.STDOUT)
+  File "/usr/lib64/python2.7/subprocess.py", line 223, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['ssh', '-q', '-i', '/home/smitch/VirtualBox VMs/openstack/labs/lib/osbash-ssh-keys/osbash_key', '-o', 'UserKnownHostsFile=/dev/null', '-o', 'StrictHostKeyChecking=no', '-o', 'ConnectTimeout=10', '-o', 'ControlPath=none', '-p', '2232', 'osbash@127.0.0.1', 'mkdir', '-p', 'autostart']' returned non-zero exit status 255
+Traceback (most recent call last):
+  File "/home/smitch/VirtualBox VMs/openstack/labs/stacktrain/core/ssh.py", line 124, in vm_ssh
+    stderr=subprocess.STDOUT)
+  File "/usr/lib64/python2.7/subprocess.py", line 223, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['ssh', '-q', '-i', '/home/smitch/VirtualBox VMs/openstack/labs/lib/osbash-ssh-keys/osbash_key', '-o', 'UserKnownHostsFile=/dev/null', '-o', 'StrictHostKeyChecking=no', '-o', 'ConnectTimeout=10', '-o', 'ControlPath=none', '-p', '2232', 'osbash@127.0.0.1', 'mkdir', '-p', 'autostart']' returned non-zero exit status 255
+...............................................................^[[B..........................................................................................................................................INFO	    Connected to ssh server.
+...INFO	Start autostart/00_init_compute1_node.sh
+.INFO	  done
+................................................. 31Mins! ..............................................................
+7.2GB with 4GB SWAP
+
+Howver I think this was runing all the time!
+
+login to first (controller) host:
+
+ssh -p 2230 osbash@localhost 
+The authenticity of host '[localhost]:2230 ([127.0.0.1]:2230)' can't be established.
+ECDSA key fingerprint is SHA256:BMEThS4mZJf2XKKTpTz5T/yyeZ/hcbQc+7CYn+Gt1jI.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '[localhost]:2230' (ECDSA) to the list of known hosts.
+osbash@localhost's password: 
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+osbash@controller:~$ 
+osbash@controller:~$ 
+osbash@controller:~$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 04:08 ?        00:00:13 /sbin/init
+root         2     0  0 04:08 ?        00:00:00 [kthreadd]
+root         3     2  0 04:08 ?        00:00:00 [kworker/0:0]
+root         4     2  0 04:08 ?        00:00:00 [kworker/0:0H]
+root         6     2  0 04:08 ?        00:00:00 [mm_percpu_wq]
+root         7     2  0 04:08 ?        00:00:02 [ksoftirqd/0]
+root         8     2  0 04:08 ?        00:00:02 [rcu_sched]
+root         9     2  0 04:08 ?        00:00:00 [rcu_bh]
+root        10     2  0 04:08 ?        00:00:00 [migration/0]
+root        11     2  0 04:08 ?        00:00:00 [watchdog/0]
+root        12     2  0 04:08 ?        00:00:00 [cpuhp/0]
+root        13     2  0 04:08 ?        00:00:00 [kdevtmpfs]
+root        14     2  0 04:08 ?        00:00:00 [netns]
+root        15     2  0 04:08 ?        00:00:00 [rcu_tasks_kthre]
+root        16     2  0 04:08 ?        00:00:00 [kauditd]
+root        17     2  0 04:08 ?        00:00:00 [khungtaskd]
+root        18     2  0 04:08 ?        00:00:00 [oom_reaper]
+root        19     2  0 04:08 ?        00:00:00 [writeback]
+root        20     2  0 04:08 ?        00:00:00 [kcompactd0]
+root        21     2  0 04:08 ?        00:00:00 [ksmd]
+root        22     2  0 04:08 ?        00:00:00 [khugepaged]
+root        23     2  0 04:08 ?        00:00:00 [crypto]
+root        24     2  0 04:08 ?        00:00:00 [kintegrityd]
+root        25     2  0 04:08 ?        00:00:00 [kblockd]
+root        26     2  0 04:08 ?        00:00:00 [ata_sff]
+root        27     2  0 04:08 ?        00:00:00 [md]
+root        28     2  0 04:08 ?        00:00:00 [edac-poller]
+root        29     2  0 04:08 ?        00:00:00 [devfreq_wq]
+root        30     2  0 04:08 ?        00:00:00 [watchdogd]
+root        34     2  0 04:08 ?        00:00:00 [kswapd0]
+root        35     2  0 04:08 ?        00:00:00 [ecryptfs-kthrea]
+root        77     2  0 04:08 ?        00:00:00 [kthrotld]
+root        78     2  0 04:08 ?        00:00:00 [acpi_thermal_pm]
+root        79     2  0 04:08 ?        00:00:00 [scsi_eh_0]
+root        80     2  0 04:08 ?        00:00:00 [scsi_tmf_0]
+root        81     2  0 04:08 ?        00:00:00 [scsi_eh_1]
+root        82     2  0 04:08 ?        00:00:00 [scsi_tmf_1]
+root        86     2  0 04:08 ?        00:00:01 [kworker/u2:3]
+root        88     2  0 04:08 ?        00:00:00 [ipv6_addrconf]
+root        97     2  0 04:08 ?        00:00:00 [kstrp]
+root       115     2  0 04:08 ?        00:00:00 [charger_manager]
+root       163     2  0 04:08 ?        00:00:00 [scsi_eh_2]
+root       165     2  0 04:08 ?        00:00:00 [scsi_tmf_2]
+root       166     2  0 04:08 ?        00:00:00 [scsi_eh_3]
+root       167     2  0 04:08 ?        00:00:00 [scsi_tmf_3]
+root       168     2  0 04:08 ?        00:00:00 [scsi_eh_4]
+root       169     2  0 04:08 ?        00:00:00 [scsi_tmf_4]
+root       172     2  0 04:08 ?        00:00:02 [kworker/0:1H]
+root       192     2  0 04:08 ?        00:00:02 [jbd2/sda1-8]
+root       193     2  0 04:08 ?        00:00:00 [ext4-rsv-conver]
+root       232     1  0 04:08 ?        00:00:00 /lib/systemd/systemd-journald
+root       244     1  0 04:08 ?        00:00:00 /lib/systemd/systemd-udevd
+systemd+   269     1  0 04:08 ?        00:00:00 /lib/systemd/systemd-networkd
+systemd+   303     1  0 04:08 ?        00:00:00 /lib/systemd/systemd-timesyncd
+root       363     1  0 04:08 ?        00:00:00 /usr/lib/accountsservice/account
+root       364     1  0 04:08 ?        00:00:02 /lib/systemd/systemd-logind
+root       374     1  0 04:08 ?        00:00:00 /usr/sbin/cron -f
+message+   375     1  0 04:08 ?        00:00:03 /usr/bin/dbus-daemon --system --
+root       426     1  0 04:08 ?        00:00:00 /usr/bin/python3 /usr/bin/networ
+root       443     2  0 04:08 ?        00:00:00 [iprt-VBoxWQueue]
+root       514     1  0 04:08 tty1     00:00:00 /sbin/agetty -o -p -- \u --nocle
+root       516     1  0 04:08 ?        00:00:00 /usr/sbin/sshd -D
+osbash    1026     1  0 04:08 ?        00:00:00 /lib/systemd/systemd --user
+osbash    1027  1026  0 04:08 ?        00:00:00 (sd-pam)
+systemd+  1162     1  0 04:08 ?        00:00:00 /lib/systemd/systemd-resolved
+root      1164     1  0 04:08 ?        00:00:00 /sbin/dhclient -1 -4 -v -pf /run
+mysql     4081     1  0 04:09 ?        00:00:39 /usr/sbin/mysqld
+rabbitmq  5108     1  0 04:09 ?        00:00:00 /bin/sh /usr/sbin/rabbitmq-serve
+rabbitmq  5121  5108  0 04:09 ?        00:00:00 /bin/sh /usr/lib/rabbitmq/bin/ra
+rabbitmq  5297     1  0 04:09 ?        00:00:00 /usr/lib/erlang/erts-9.2/bin/epm
+rabbitmq  5384  5121  0 04:09 ?        00:00:19 /usr/lib/erlang/erts-9.2/bin/bea
+rabbitmq  5490  5384  0 04:09 ?        00:00:00 erl_child_setup 65536
+rabbitmq  5549  5490  0 04:09 ?        00:00:00 inet_gethost 4
+rabbitmq  5550  5549  0 04:09 ?        00:00:00 inet_gethost 4
+nova      6367     1  1 04:15 ?        00:02:57 /usr/bin/python2.7 /usr/bin/nova
+nova      6377     1  1 04:15 ?        00:02:54 /usr/bin/python2.7 /usr/bin/nova
+nova      6389     1  1 04:15 ?        00:02:54 /usr/bin/python2.7 /usr/bin/nova
+nova      6405     1  0 04:15 ?        00:00:07 /usr/bin/python2.7 /usr/bin/nova
+memcache  7055     1  0 04:09 ?        00:00:04 /usr/bin/memcached -m 64 -p 1121
+root      8349     1  0 04:16 ?        00:00:00 /usr/sbin/haproxy -Ws -f /etc/ha
+haproxy   8350  8349  0 04:16 ?        00:00:00 /usr/sbin/haproxy -Ws -f /etc/ha
+syslog    9012     1  0 04:16 ?        00:00:00 /usr/sbin/rsyslogd -n
+neutron  10656     1  0 04:17 ?        00:00:04 /usr/bin/python2.7 /usr/bin/neut
+neutron  10671     1  1 04:17 ?        00:02:51 /usr/bin/python2.7 /usr/bin/neut
+neutron  10681     1  2 04:17 ?        00:03:27 /usr/bin/python2.7 /usr/bin/neut
+neutron  10691     1  1 04:17 ?        00:02:41 /usr/bin/python2.7 /usr/bin/neut
+neutron  10701     1  1 04:17 ?        00:03:05 /usr/bin/python2.7 /usr/bin/neut
+neutron  10752 10656  0 04:17 ?        00:00:00 /usr/bin/python2.7 /usr/bin/neut
+neutron  10754 10656  0 04:17 ?        00:00:18 /usr/bin/python2.7 /usr/bin/neut
+neutron  10755 10656  0 04:17 ?        00:00:14 /usr/bin/python2.7 /usr/bin/neut
+neutron  10756 10656  1 04:17 ?        00:03:11 /usr/bin/python2.7 /usr/bin/neut
+root     10757     1  0 04:17 ?        00:00:00 /usr/bin/python2.7 /usr/bin/priv
+root     10838     1  0 04:17 ?        00:00:00 /usr/bin/python2.7 /usr/bin/priv
+nova     13710     1  2 04:20 ?        00:03:19 /usr/bin/python2.7 /usr/bin/nova
+cinder   13720     1  1 04:20 ?        00:02:44 /usr/bin/python2.7 /usr/bin/cind
+root     13750     1  0 04:20 ?        00:00:00 /usr/sbin/apache2 -k start
+cinder   13752 13750  0 04:20 ?        00:00:03 (wsgi:cinder-wsgi -k start
+horizon  13753 13750  0 04:20 ?        00:00:00 (wsgi:horizon)    -k start
+keystone 13754 13750  0 04:20 ?        00:00:31 (wsgi:keystone-pu -k start
+nova     13755 13750  0 04:20 ?        00:00:00 (wsgi:nova-placem -k start
+www-data 13756 13750  0 04:20 ?        00:00:00 /usr/sbin/apache2 -k start
+www-data 13757 13750  0 04:20 ?        00:00:00 /usr/sbin/apache2 -k start
+nova     13876 13710  0 04:20 ?        00:00:00 /usr/bin/python2.7 /usr/bin/nova
+nova     13877 13710  0 04:20 ?        00:00:00 /usr/bin/python2.7 /usr/bin/nova
+heat     15609     1  0 04:21 ?        00:00:01 /usr/bin/python2.7 /usr/bin/heat
+heat     15619     1  0 04:21 ?        00:00:01 /usr/bin/python2.7 /usr/bin/heat
+heat     15632     1  1 04:21 ?        00:02:24 /usr/bin/python2.7 /usr/bin/heat
+heat     15656 15609  0 04:21 ?        00:00:04 /usr/bin/python2.7 /usr/bin/heat
+heat     15657 15632  1 04:21 ?        00:02:26 /usr/bin/python2.7 /usr/bin/heat
+heat     15658 15632  1 04:21 ?        00:02:25 /usr/bin/python2.7 /usr/bin/heat
+heat     15659 15632  1 04:21 ?        00:02:22 /usr/bin/python2.7 /usr/bin/heat
+heat     15660 15632  1 04:21 ?        00:02:24 /usr/bin/python2.7 /usr/bin/heat
+root     17513   516  0 06:44 ?        00:00:00 sshd: osbash [priv]
+osbash   17556 17513  0 06:44 ?        00:00:00 sshd: osbash@pts/0
+osbash   17557 17556  0 06:44 pts/0    00:00:00 -bash
+root     17696     2  0 06:50 ?        00:00:00 [kworker/u2:1]
+osbash   17814 17557  1 07:00 pts/0    00:00:00 ps -ef
+root     18091     2  0 04:11 ?        00:00:00 [iscsi_eh]
+root     18103     2  0 04:11 ?        00:00:00 [ib-comp-wq]
+root     18104     2  0 04:11 ?        00:00:00 [ib_mcast]
+root     18105     2  0 04:11 ?        00:00:00 [ib_nl_sa_wq]
+root     18110     2  0 04:11 ?        00:00:00 [rdma_cm]
+glance   26580     1  1 04:11 ?        00:02:24 /usr/bin/python2.7 /usr/bin/glan
+glance   26592     1  1 04:11 ?        00:02:24 /usr/bin/python2.7 /usr/bin/glan
+glance   26612 26580  0 04:11 ?        00:00:00 /usr/bin/python2.7 /usr/bin/glan
+glance   26613 26592  0 04:11 ?        00:00:00 /usr/bin/python2.7 /usr/bin/glan
+root     29006     2  0 04:12 ?        00:00:00 [kworker/0:3]
+root     30400     1  0 04:13 ?        00:00:00 /sbin/lvmetad -f
+osbash@controller:~$ 
+
+login to 2nd ( Compute vm)
+ssh -p 2232 osbash@localhost 
+
+Warning: Permanently added '[localhost]:2232' (ECDSA) to the list of known hosts.
+osbash@localhost's password: 
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Security certifications for Ubuntu!
+   We now have FIPS, STIG, CC and a CIS Benchmark.
+
+   - http://bit.ly/Security_Certification
+
+ * Want to make a highly secure kiosk, smart display or touchscreen?
+   Here's a step-by-step tutorial for a rainy weekend, or a startup.
+
+   - https://bit.ly/secure-kiosk
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+osbash@compute1:~$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 04:22 ?        00:00:01 /sbin/init
+root         2     0  0 04:22 ?        00:00:00 [kthreadd]
+root         4     2  0 04:22 ?        00:00:00 [kworker/0:0H]
+root         6     2  0 04:22 ?        00:00:00 [mm_percpu_wq]
+root         7     2  0 04:22 ?        00:00:00 [ksoftirqd/0]
+root         8     2  0 04:22 ?        00:00:00 [rcu_sched]
+root         9     2  0 04:22 ?        00:00:00 [rcu_bh]
+root        10     2  0 04:22 ?        00:00:00 [migration/0]
+root        11     2  0 04:22 ?        00:00:00 [watchdog/0]
+root        12     2  0 04:22 ?        00:00:00 [cpuhp/0]
+root        13     2  0 04:22 ?        00:00:00 [kdevtmpfs]
+root        14     2  0 04:22 ?        00:00:00 [netns]
+root        15     2  0 04:22 ?        00:00:00 [rcu_tasks_kthre]
+root        16     2  0 04:22 ?        00:00:00 [kauditd]
+root        17     2  0 04:22 ?        00:00:00 [khungtaskd]
+root        18     2  0 04:22 ?        00:00:00 [oom_reaper]
+root        19     2  0 04:22 ?        00:00:00 [writeback]
+root        20     2  0 04:22 ?        00:00:00 [kcompactd0]
+root        21     2  0 04:22 ?        00:00:00 [ksmd]
+root        22     2  0 04:22 ?        00:00:00 [khugepaged]
+root        23     2  0 04:22 ?        00:00:00 [crypto]
+root        24     2  0 04:22 ?        00:00:00 [kintegrityd]
+root        25     2  0 04:22 ?        00:00:00 [kblockd]
+root        26     2  0 04:22 ?        00:00:00 [ata_sff]
+root        27     2  0 04:22 ?        00:00:00 [md]
+root        28     2  0 04:22 ?        00:00:00 [edac-poller]
+root        29     2  0 04:22 ?        00:00:00 [devfreq_wq]
+root        30     2  0 04:22 ?        00:00:00 [watchdogd]
+root        31     2  0 04:22 ?        00:00:00 [kworker/u2:1]
+root        32     2  0 04:22 ?        00:00:00 [kworker/0:1]
+root        34     2  0 04:22 ?        00:00:00 [kswapd0]
+root        35     2  0 04:22 ?        00:00:00 [ecryptfs-kthrea]
+root        77     2  0 04:22 ?        00:00:00 [kthrotld]
+root        78     2  0 04:22 ?        00:00:00 [acpi_thermal_pm]
+root        79     2  0 04:22 ?        00:00:00 [scsi_eh_0]
+root        80     2  0 04:22 ?        00:00:00 [scsi_tmf_0]
+root        81     2  0 04:22 ?        00:00:00 [scsi_eh_1]
+root        82     2  0 04:22 ?        00:00:00 [scsi_tmf_1]
+root        88     2  0 04:22 ?        00:00:00 [ipv6_addrconf]
+root        97     2  0 04:22 ?        00:00:00 [kstrp]
+root       115     2  0 04:22 ?        00:00:00 [charger_manager]
+root       152     2  0 04:22 ?        00:00:00 [scsi_eh_2]
+root       153     2  0 04:22 ?        00:00:00 [kworker/0:2]
+root       154     2  0 04:22 ?        00:00:00 [scsi_tmf_2]
+root       155     2  0 04:22 ?        00:00:00 [scsi_eh_3]
+root       156     2  0 04:22 ?        00:00:00 [scsi_tmf_3]
+root       157     2  0 04:22 ?        00:00:00 [scsi_eh_4]
+root       158     2  0 04:22 ?        00:00:00 [scsi_tmf_4]
+root       162     2  0 04:22 ?        00:00:00 [kworker/0:1H]
+root       182     2  0 04:22 ?        00:00:00 [jbd2/sda1-8]
+root       183     2  0 04:22 ?        00:00:00 [ext4-rsv-conver]
+root       220     1  0 04:22 ?        00:00:00 /lib/systemd/systemd-journald
+root       226     1  0 04:22 ?        00:00:00 /lib/systemd/systemd-udevd
+systemd+   271     1  0 04:22 ?        00:00:00 /lib/systemd/systemd-networkd
+systemd+   300     1  0 04:22 ?        00:00:00 /lib/systemd/systemd-timesyncd
+root       446     1  0 04:22 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+message+   447     1  0 04:22 ?        00:00:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activatio
+root       451     2  0 04:22 ?        00:00:00 [iprt-VBoxWQueue]
+root       454     1  0 04:22 ?        00:00:00 /lib/systemd/systemd-logind
+root       457     1  0 04:22 ?        00:00:00 /usr/sbin/cron -f
+root       458     1  0 04:22 ?        00:00:00 /usr/lib/accountsservice/accounts-daemon
+syslog     459     1  0 04:22 ?        00:00:00 /usr/sbin/rsyslogd -n
+root       504     1  0 04:22 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root       505     1  0 04:22 ?        00:00:00 /usr/sbin/sshd -D
+osbash    1026     1  0 04:22 ?        00:00:00 /lib/systemd/systemd --user
+osbash    1027  1026  0 04:22 ?        00:00:00 (sd-pam)
+systemd+  1162     1  0 04:22 ?        00:00:00 /lib/systemd/systemd-resolved
+root      1164     1  0 04:22 ?        00:00:00 /sbin/dhclient -1 -4 -v -pf /run/dhclient.enp0s3.pid -lf /var/lib/dhcp/dhclient.enp0s3.le
+root      1447     2  0 06:54 ?        00:00:00 [kworker/u2:0]
+root      1448     2  0 06:59 ?        00:00:00 [kworker/u2:2]
+root      1449   505  0 07:01 ?        00:00:00 sshd: osbash [priv]
+osbash    1488  1449  0 07:01 ?        00:00:00 sshd: osbash@pts/0
+osbash    1489  1488  0 07:01 pts/0    00:00:00 -bash
+osbash    1499  1489  0 07:01 pts/0    00:00:00 ps -ef
+osbash@compute1:~$ 
+
+http://127.0.0.1:8888/horizon
+Two accounts are configured: admin/admin_user_secret and demo/demo_user_pass. The default domain required for login is "default". These and other passwords are configured in config/credentials.
+
+
