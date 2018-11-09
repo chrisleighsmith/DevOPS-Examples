@@ -1,15 +1,23 @@
 Training, Labs and Tools list
+-----------------------------
 
 
 Kubernets/Container:
 
 https://github.com/kelseyhightower/kubernetes-the-hard-way
-Install 'Docker Tutorial' Mobile App on Andorid Play Store
+Install 'Docker Tutorial' Mobile App on Android Play Store
+QuickGuide https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeexamples/Docker/example-centos-build.txt
 
 OpenStack:
 
 https://docs.openstack.org/rocky/
-CoreOs Documentation 
+CoreOs Documentation https://coreos.com/tectonic/docs/latest/tutorials/sandbox/monitoring.html
+
+
+CI/CD:
+
+Jenkins in 5 Minutes !?  https://www.soscgroup.com/?p=173
+
 
 General DevOps:
 
@@ -17,10 +25,9 @@ https://github.com/Artemmkin/infrastructure-as-code-tutorial
 https://www.katacoda.com/learn
 Install Oreilly 'Safari Queue' Mobile Phone App for Books via Android Play Store
 https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/src/4b3b66fb107e117efd109272860f84b098a12a52/Books/?at=master
-
+ELK https://github.com/calinah/efk-demo?files=1 Elastic Search with Fluent Kabana and Protheus
 
 Security:
 
 https://www.fail2ban.org/wiki/index.php/Main_Page
 https://letsencrypt.org/
-
