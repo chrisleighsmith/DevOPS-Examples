@@ -1,17 +1,23 @@
-Notes created during install of OpenStack Lab 'Rocky version' From:
-https://wiki.openstack.org/wiki/Documentation/training-labs#Building_the_cluster
+Notes created during instalign a working demo of OpenStack Rocky version' Lab on Fedora28 and Virtualbox:
+Reference: https://wiki.openstack.org/wiki/Documentation/training-labs#Building_the_cluster
+
+Equally you can install the demo on KVM instead of virtualBox
 
 1.Download the Lab .targz file to build an virtualbox disk for lab cluster
 (This is for Rocky- current Stable release as of Nov 18)
 
 install git if not already setup
 
-create a directory and download Openstxck traing labs git repo
+create a directory and download Openstack traing labs git repo
+mkdir ~/openstac-labs
 
 git clone git://git.openstack.org/openstack/training-labs.git
 
+If you running the demo on KVM rather than VirtualBox use this first
+sed -i.bak 's/${PROVIDER:=virtualbox}/${PROVIDER:=kvm}/' config/localrc
+
+Else install:
 cd training-labs/labs
-run:
 ./st.py -b cluster
 
 This downloads a Ubuntu 1804 .vdi file and starts cluster using various install scripts
