@@ -1,16 +1,24 @@
 Notes created during install of OpenStack Lab 'Rocky version' From:
-ttps://wiki.openstack.org/wiki/Documentation/training-labs#Building_the_cluster
+https://wiki.openstack.org/wiki/Documentation/training-labs#Building_the_cluster
 
 1.Download the Lab .targz file to build an virtualbox disk for lab cluster
 (This is for Rocky- current Stable release as of Nov 18)
 
-run  ./st.py -b cluster
+install git if not already setup
 
-This downloads at Ubuntu 1804 .vdi file and starts cluster using various instakk scripts
+create a directory and download Openstxck traing labs git repo
+
+git clone git://git.openstack.org/openstack/training-labs.git
+
+cd training-labs/labs
+run:
+./st.py -b cluster
+
+This downloads a Ubuntu 1804 .vdi file and starts cluster using various install scripts
 Takes at least 15 mins
 
 
-This takes some time. Recomend to have Laptop with at least 6GB ( or it will swap like mad)
+This takes some time. Recommend you have Laptop/Desktop with at least 6GB RAM (or it will swap like mad)
 10GB of Disk is used to build server and 1 Core
 
 You will then be able to ssh to the headless cluster server
