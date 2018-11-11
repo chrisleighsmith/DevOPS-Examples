@@ -10,7 +10,7 @@ QuickGuide https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeex
 
 OpenStack:
 
-https://github.com/chrisleighsmith/DevOPS-Examples/tree/master/codeexamples/OpenStack/
+https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeexamples/OpenStack/OpenStack-Lab-Rocky-Cluster-Install.txt
 https://docs.openstack.org/rocky/
 CoreOs Documentation https://coreos.com/tectonic/docs/latest/tutorials/sandbox/monitoring.html
 
