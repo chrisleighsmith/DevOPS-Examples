@@ -10,6 +10,7 @@ QuickGuide https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeex
 
 OpenStack:
 
+https://github.com/chrisleighsmith/DevOPS-Examples/tree/master/codeexamples/OpenStack/
 https://docs.openstack.org/rocky/
 CoreOs Documentation https://coreos.com/tectonic/docs/latest/tutorials/sandbox/monitoring.html
 
