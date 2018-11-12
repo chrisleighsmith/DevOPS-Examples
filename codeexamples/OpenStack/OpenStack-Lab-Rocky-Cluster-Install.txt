@@ -2,7 +2,7 @@ Notes created whilst installing a working demo of OpenStack Rocky version' Lab o
 Reference: https://wiki.openstack.org/wiki/Documentation/training-labs#Building_the_cluster
 
 Another method installing Openshift on a single headless Ubuntu Desktop/Laptop is covered here:
-https://docs.openstack.org/devstack/rocky/guides/single-machine.html
+https://docs.openstack.org/devstack/rocky/guides/single-machine.html ( Takes about an hour to update packages and configure)
 
 Equally you can install the demo on KVM instead of virtualBox
 
