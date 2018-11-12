@@ -1,5 +1,8 @@
-Notes created during instalign a working demo of OpenStack Rocky version' Lab on Fedora28 and Virtualbox:
+Notes created whilst installing a working demo of OpenStack Rocky version' Lab on Fedora28 and Virtualbox (using 2 VM's):
 Reference: https://wiki.openstack.org/wiki/Documentation/training-labs#Building_the_cluster
+
+Another method installing Openshift on a single headless Ubuntu Desktop/Laptop is covered here:
+https://docs.openstack.org/devstack/rocky/guides/single-machine.html
 
 Equally you can install the demo on KVM instead of virtualBox
 
@@ -16,7 +19,7 @@ git clone git://git.openstack.org/openstack/training-labs.git
 If you running the demo on KVM rather than VirtualBox use this first
 sed -i.bak 's/${PROVIDER:=virtualbox}/${PROVIDER:=kvm}/' config/localrc
 
-Else install:
+Else install on virualbox:
 cd training-labs/labs
 ./st.py -b cluster
 
