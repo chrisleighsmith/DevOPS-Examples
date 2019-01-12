@@ -32,3 +32,10 @@ Security:
 
 https://www.fail2ban.org/wiki/index.php/Main_Page
 https://letsencrypt.org/
+
+
+Python:
+
+https://www.oreilly.com/library/view/introduction-to-python/9781491904794/
+https://www.jetbrains.com/pycharm-edu/learners/ (and Download Pycham Educational)
+https://www.codecademy.com/learn/learn-python
