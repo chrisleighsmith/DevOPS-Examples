@@ -18,7 +18,6 @@ Loading cached images from config file.
 
 start the browser to monitor kubernetes
 
-
 [smitch@sosc-x1-fed28-cs-1 ~]$ minikube dashboard
 Opening kubernetes dashboard in default browser...
 [smitch@sosc-x1-fed28-cs-1 ~]$ Created new window in existing browser session.
