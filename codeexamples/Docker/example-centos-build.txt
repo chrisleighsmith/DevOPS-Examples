@@ -21,6 +21,16 @@ yum install epel-release htop iotop iftop vim sudo tux bin-utils
 sudo docker tag centos-base-tools $DOCKER_ID_USER/centos-base-tools
 sudo docker push sosc/docker-centos/centos-base-tools
 
+You may get an error on the push saying 'Unauthorized'
+Try the below to login to DockerHub
+
+docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: MyDockerhublogin
+Password:
+Login Succeeded
+
+
 Useful:
 
 'docker stats' shows all running dokcer containers and what resources they are consuming
@@ -33,9 +43,9 @@ c8d9c82f1481        0.00%               6.898 MiB / 7.492 GiB   0.09%           
 If you want to start docker and force it use forward ports external to insternal:
 docker run -p 8080:80 sosc/centos-base-apache /usr/sbin/httpd -D FOREGROUND
 
-To see what a Docker container is doing:
+To see what a Docker container is configured todo  ( including passwords)
 
-docker inspect c8d9c82f1481
+'docker inspect c8d9c82f1481'
 [
     {
         "Id": "fa77ab293db6fe54bb8843b7c59af31e8d6107164c2b845ef8a5c489092c2d0c",
