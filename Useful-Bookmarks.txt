@@ -39,3 +39,4 @@ Python:
 https://www.oreilly.com/library/view/introduction-to-python/9781491904794/
 https://www.jetbrains.com/pycharm-edu/learners/ (and Download Pycham Educational)
 https://www.codecademy.com/learn/learn-python
+https://youtu.be/rfscVS0vtbw *Python3
