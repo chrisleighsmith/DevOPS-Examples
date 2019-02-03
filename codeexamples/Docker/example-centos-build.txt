@@ -17,7 +17,7 @@ yum install epel-release htop iotop iftop vim sudo tux bin-utils
 6.sudo docker commit centos-container1 centos-base-tools
 - commit the changes to the new imagefile 'centos-base-tools'
 
-7. Unload the new docker image and sahre on Docker Hub
+7. Upload the new docker image and sahre on Docker Hub
 sudo docker tag centos-base-tools $DOCKER_ID_USER/centos-base-tools
 sudo docker push sosc/docker-centos/centos-base-tools
 
