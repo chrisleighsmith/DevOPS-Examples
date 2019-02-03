@@ -33,3 +33,47 @@ c8d9c82f1481        0.00%               6.898 MiB / 7.492 GiB   0.09%           
 If you want to start docker and force it use forward ports external to insternal:
 docker run -p 8080:80 sosc/centos-base-apache /usr/sbin/httpd -D FOREGROUND
 
+To see what a Docker container is doing:
+
+docker inspect c8d9c82f1481
+[
+    {
+        "Id": "fa77ab293db6fe54bb8843b7c59af31e8d6107164c2b845ef8a5c489092c2d0c",
+        "Created": "2019-02-01T07:22:29.9306945Z",
+        "Path": "/bin/bash",
+        "Args": [],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2019-02-02T13:38:29.7782963Z",
+            "FinishedAt": "2019-02-02T13:42:10.2908715Z"
+        },
+        "Image": "sha256:7e87e2b3bf7a84571ecc2a8cea8a81fabb63b2dde8e7fc559bcbee28d8e9be83",
+        "ResolvConfPath": "/var/lib/docker/containers/fa77ab293db6fe54bb8843b7c59af31e8d6107164c2b845ef8a5c489092c2d0c/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/fa77ab293db6fe54bb8843b7c59af31e8d6107164c2b845ef8a5c489092c2d0c/hostname",
+        "HostsPath": "/var/lib/docker/containers/fa77ab293db6fe54bb8843b7c59af31e8d6107164c2b845ef8a5c489092c2d0c/hosts",
+        "LogPath": "/var/lib/docker/containers/fa77ab293db6fe54bb8843b7c59af31e8d6107164c2b845ef8a5c489092c2d0c/fa77ab293db6fe54bb8843b7c59af31e8d6107164c2b845ef8a5c489092c2d0c-json.log",
+..........
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "5196daf00eb5bbce2a5fb8a4b771c86e99314bdea50bc6a1c6a293adf612c486",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+etc
+
+
+
+
