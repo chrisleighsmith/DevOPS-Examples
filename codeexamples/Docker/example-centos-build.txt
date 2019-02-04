@@ -87,3 +87,91 @@ etc
 
 
 
+Remove old images and containers no longer needed: 'docker prune'
+
+PS C:\WINDOWS\system32> docker ps -a
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS                         PORTS               NAMES
+adc5676f7d38        ab23083872b9             "/bin/bash"              21 minutes ago      Exited (0) 13 minutes ago                          running-tomcat
+aa1d3b8630c4        ab3f9d76cb09             "/bin/bash"              38 minutes ago      Exited (0) 31 minutes ago                          new-tomcat
+47baf4d154d3        d6c6378bbada             "/bin/bash"              44 minutes ago      Exited (0) 43 minutes ago                          pulled
+d1b2be6692a8        0800b1b1e190             "/bin/bash"              About an hour ago   Up About an hour                                   thales-tomcat
+8f5c356d8765        0800b1b1e190             "/bin/bash"              About an hour ago   Exited (0) About an hour ago                       ubuntu-newrelic-tomcat
+d1044a3cf4b4        d6c6378bbada             "/bin/bash"              44 hours ago        Exited (0) 44 hours ago                            priceless_hellman
+4f596fc65203        d6c6378bbada             "/bin/bash"              3 days ago          Exited (255) 2 days ago                            adoring_tu
+fa77ab293db6        ubuntu:xenial            "/bin/bash"              3 days ago          Exited (0) About an hour ago                       eager_brahmagupta
+e7544a2f7d38        ubuntu:xenial            "--name soarizon_ubu…"   3 days ago          Created                                            sleepy_chatterjee
+5c862b28648a        ubuntu:xenial            "-n soarizon_ubuntu1…"   3 days ago          Created                                            brave_dhawan
+87d0bad89b3b        sosc/centos-base-tools   "/bin/bash"              2 months ago        Exited (255) 4 weeks ago                           centos-base-1
+a4cc3eac1c96        sosc/centos-base-tools   "bash"                   4 months ago        Exited (255) 2 months ago                          centos-git
+
+
+PS C:\WINDOWS\system32> docker images -a
+REPOSITORY                                TAG                 IMAGE ID            CREATED              SIZE
+ubuntu-newrelic-tomcat                    latest              61c89adecc08        About a minute ago   818MB
+ts/test                test        61c89adecc08        About a minute ago   818MB
+ts/test                <none>              69cb0a7c867b        9 minutes ago        818MB
+ts/test                <none>              ab23083872b9        24 minutes ago       818MB
+ts/test                <none>              c4fe57c9732e        32 minutes ago       508MB
+ts/test                <none>              ab3f9d76cb09        41 minutes ago       506MB
+ts/test/test   latest              3984b344771d        About an hour ago    506MB
+ts/test/tes    latest              a6e444971258        About an hour ago    506MB
+ts/est                <none>              d6c6378bbada        3 days ago           480MB
+<none>                                    <none>              0800b1b1e190        3 days ago           480MB
+<none>                                    <none>              09f3e86545fe        3 days ago           480MB
+ubuntu                                    xenial              7e87e2b3bf7a        12 days ago          117MB
+sosc/centos-base-tools                    latest              de3c2fede5b4        4 months ago         791MB
+
+
+PS C:\WINDOWS\system32> docker system prune
+WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all dangling images
+        - all dangling build cache
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+adc5676f7d38c264c64a3de4c73e750f3e3806232470101b9c2343639aefd9ab
+aa1d3b8630c4caaf2cb473921116614e5557279f66a7e335e7c9b2a80b3d097c
+47baf4d154d38a6c262f34bb27ba2abdceeba1cfa3a916d05e2eb46549635adf
+8f5c356d8765fd73ae18858d95132b95cbb97d5a7194c77d77ec949021394ff9
+d1044a3cf4b477a4ef8903e6a66de804ad243a1b328c1600246cd0102968d311
+4f596fc652039582b2f76cf99441be0882fcd14d689fcf76cfe35b93e59e1aa3
+fa77ab293db6fe54bb8843b7c59af31e8d6107164c2b845ef8a5c489092c2d0c
+e7544a2f7d383d7b3dc90b22894c017316cafc84b22cbe496a4d473c94752893
+5c862b28648a3dd298ca4f4da6c3d1e5fec44f116439cd428843232fba07029e
+87d0bad89b3bd68663d6be787dcc5cda1daa705bf23d9739de6da5c75b510376
+a4cc3eac1c964ea77254a88a6416b59ce81afa05d07a41aee17c43864744f038
+
+Deleted Images:
+untagged: ts/privatetest@sha256:e4faef96491cbf140c8cb03fcf2515d51ca25b4a964bd1193c7ad0972e1475d8
+deleted: sha256:d6c6378bbadaaf83ac95df91b2ac0a1b1dbe0a74076f8b2ffd2d3b83d9c80784
+untagged: ts/privatetest@sha256:91b88e0861a76597cc981b238dd65f442b6a2f26f7efbbc35edb680bedf6d7f1
+deleted: sha256:69cb0a7c867bc5e0a1b1da3257b5439bcab62d2d558e6dd5a47a014862a5805c
+deleted: sha256:0beb11b1f628873ba905a5bb17ba43e45c2f5dbc56b4c1f8a59cd268c39c5e43
+untagged: ts/privatetest@sha256:f0af363d29b86155da760ccba7c97b2ce9462ffd55f6f292e0159f31b8729a15
+deleted: sha256:ab23083872b95c5ef5aa2c34ac5a50c4cc5f5d8879e2074f1001f5b7ab4f28b7
+deleted: sha256:38a758c149412f3203ee65f7ffbc4a9f0f5bb62f84287a59f3ef2e4afe4bb257
+deleted: sha256:09f3e86545fe2d9eddf138f15a2fab7991de43bf1754eb47b39edcf27a5c9f0a
+untagged: ts/privatetest@sha256:c5377f0d3d1cdd6b3e0ff4600fcf8d7e86d6f48ae86a863e157ff164facb7e39
+deleted: sha256:c4fe57c9732eb6b1abd5283c733c6cc08912cfd430ec51e85902c7cc202a9f8e
+deleted: sha256:2605b462f4fe8d26a80ec1474421e983affc3ebc57531e0f3acbf7bda161f7ba
+untagged: ts/privatetest@sha256:0d0145c854ed138f3e72663945522f40ff89f2b83e87dc460e6e7b59d06f926c
+deleted: sha256:ab3f9d76cb092aee8f653bd969078075f780cf037961637b6554eeb6bac26d2f
+
+Total reclaimed space: 1.938GB
+PS C:\WINDOWS\system32> docker images -a
+REPOSITORY                                TAG                 IMAGE ID            CREATED             SIZE
+ubuntu-newrelic-tomcat                    latest              61c89adecc08        13 minutes ago      818MB
+ts/privatetest               test        61c89adecc08        13 minutes ago      818MB
+ts/privatetest/test   latest              3984b344771d        About an hour ago   506MB
+t/privatetest/tes    latest              a6e444971258        About an hour ago   506MB
+<none>                                    <none>              0800b1b1e190        3 days ago          480MB
+ubuntu                                    xenial              7e87e2b3bf7a        12 days ago         117MB
+sosc/centos-base-tools                    latest              de3c2fede5b4        4 months ago        791MB
+PS C:\WINDOWS\system32>
+
+PS C:\WINDOWS\system32> docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+d1b2be6692a8        0800b1b1e190        "/bin/bash"         About an hour ago   Up About an hour                        ts-tomcat
+PS C:\WINDOWS\system32>
+
