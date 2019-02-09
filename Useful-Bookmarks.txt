@@ -31,6 +31,7 @@ ELK https://github.com/calinah/efk-demo?files=1 Elastic Search with Fluent Kaban
 Security:
 
 https://www.fail2ban.org/wiki/index.php/Main_Page
+https://github.com/swedishmike/bro_scripts
 https://letsencrypt.org/
 
 
