@@ -2,7 +2,7 @@ Training Labs and Tools list
 -----------------------------
 
 
-Kubernets/Container:
+Kubernetes/Container:
 
 https://github.com/kelseyhightower/kubernetes-the-hard-way
 Install 'Docker Tutorial' Mobile App on Android Play Store
