@@ -41,3 +41,12 @@ https://www.oreilly.com/library/view/introduction-to-python/9781491904794/
 https://www.jetbrains.com/pycharm-edu/learners/ (and Download Pycham Educational)
 https://www.codecademy.com/learn/learn-python
 https://youtu.be/rfscVS0vtbw *Python3
+
+GCP Architecture certification:
+https://www.qwiklabs.com/quests/47
+ 
+Prerequisites:
+1. https://google.qwiklabs.com/quests/24
+2. https://google.qwiklabs.com/quests/36
+3.https://google.qwiklabs.com/quests/38
+4.https://google.qwiklabs.com/quests/45
