@@ -34,7 +34,7 @@ Security:
 https://www.fail2ban.org/wiki/index.php/Main_Page
 https://github.com/swedishmike/bro_scripts
 https://letsencrypt.org/
-
+AWS Pentest Techniques: https://subscription.packtpub.com/book/virtualization_and_cloud/9781789136722
 
 Python:
 
