@@ -7,6 +7,7 @@ Kubernetes/Container:
 https://github.com/kelseyhightower/kubernetes-the-hard-way
 Install 'Docker Tutorial' Mobile App on Android Play Store
 QuickGuide https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeexamples/Docker/example-centos-build.txt
+Install Minikube on VirtualBox https://github.com/kubernetes/minikube/releases
 
 OpenStack:
 
