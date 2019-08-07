@@ -7,6 +7,8 @@ Kubernetes/Container:
 https://github.com/kelseyhightower/kubernetes-the-hard-way
 Install 'Docker Tutorial' Mobile App on Android Play Store
 QuickGuide https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeexamples/Docker/example-centos-build.txt
+Install Minikube on VirtualBox https://github.com/kubernetes/minikube/releahttps://bitbucket.org/StabledOpenSourceConsulting/chrissmith/raw/3979fcefa1bea0fb51afe5ecf91852568a15f3ed/Books/Kubernetes-Cookbook.pdfses
+Kubernetes Cookbook pdf https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/raw/3979fcefa1bea0fb51afe5ecf91852568a15f3ed/Books/Kubernetes-Cookbook.pdf
 
 OpenStack:
 
@@ -33,7 +35,7 @@ Security:
 https://www.fail2ban.org/wiki/index.php/Main_Page
 https://github.com/swedishmike/bro_scripts
 https://letsencrypt.org/
-
+AWS Pentest Techniques: https://subscription.packtpub.com/book/virtualization_and_cloud/9781789136722
 
 Python:
 
@@ -41,3 +43,12 @@ https://www.oreilly.com/library/view/introduction-to-python/9781491904794/
 https://www.jetbrains.com/pycharm-edu/learners/ (and Download Pycham Educational)
 https://www.codecademy.com/learn/learn-python
 https://youtu.be/rfscVS0vtbw *Python3
+
+GCP Architecture certification:
+https://www.qwiklabs.com/quests/47
+ 
+Prerequisites:
+1. https://google.qwiklabs.com/quests/24
+2. https://google.qwiklabs.com/quests/36
+3.https://google.qwiklabs.com/quests/38
+4.https://google.qwiklabs.com/quests/45
