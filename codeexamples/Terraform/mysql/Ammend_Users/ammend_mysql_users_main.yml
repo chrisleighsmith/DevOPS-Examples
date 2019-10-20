@@ -1,0 +1,34 @@
+#Usage ~/Ansible/servers-conf$ ansible-playbook -vv --ask-vault-pass mysql-users.yml
+# Note you must have python pymysql installed locally or remote ssh host
+# i.e 'pip install pymysql'
+# Vault Password is stored in Bitkeeper
+ 
+ - name: Add or ammend MySql users in RDS.See Example User Section
+   mysql_user:
+    login_user: root
+    #Password encrypted in ansible vault roles/mysql-users/vars directory 
+    login_password: "{{root_passwd}}"
+    #login_host: localhost
+    login_host: yourrds_name-tform-restored.cdyzcjxxxxxx.eu-west-1.rds.amazonaws.com
+
+#Example Users, Add one at a time    
+    #name: user1
+    ## password: F1ddleStiX@2019
+    ###'Hashed via https://www.browserling.com/tools/mysql-password 
+    #password: '*996E7C0B05F6406E3CF8CEEBC9F9524F1C07C783'
+    #encrypted: yes
+    #host: '%'
+    ##host: 'localhost'
+    #priv: 'ou_trunk_trunk_openunderwriter.*:SELECT,INSERT,UPDATE,DELETE,GRANT'
+    #state: present
+    ##state: absent
+
+    #Example user: Unhash to create new user or ammend existing mysql user
+    name: user2
+    #'Hashed via https://www.browserling.com/tools/mysql-password 
+    password: '*F2XXXXXXX26314036BEE31ABB251E1C7F'
+    encrypted: yes
+    host: '%'
+    priv: 'ou_trunk_trunk_openunderwriter.*:SELECT,INSERT,UPDATE,DELETE'
+    #state: present
+    state: present
