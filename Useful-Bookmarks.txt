@@ -30,6 +30,9 @@ Install Oreilly 'Safari Queue' Mobile Phone App for Books via Android Play Store
 https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/src/4b3b66fb107e117efd109272860f84b098a12a52/Books/?at=master
 ELK https://github.com/calinah/efk-demo?files=1 Elastic Search with Fluent Kabana and Protheus
 
+Compilations:
+https://github.com/schoolofdevops/
+
 Security:
 
 https://www.fail2ban.org/wiki/index.php/Main_Page
