@@ -21,7 +21,7 @@ import pycurl
 import requests 
 import json
 
-#Test Curl slack message: 'curl -X POST -H 'Content-type: application/json' --data '{"text":"Http response error. Uber or USGov issues"}' https://hooks.slack.com/services/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 
+#Test Curl slack message: 'curl -X POST -H 'Content-type: application/json' --data '{"text":"Http response error. Uber or USGov issues"}' https://hooks.slack.com/services/T0Z4xxx/BGxxxxT/oRWtxxxx2w3N 
 def Post_Slack_Alert (slack_message,slack_text):
   webhook_url = 'https://hooks.slack.com/services/T0ZxxxxxxGG/BGCxxxx/oRWth3i5lCtxxxxxxxxxxxxiVg6VO2w3N'
   slack_data = {'attachments': [
