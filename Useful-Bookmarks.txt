@@ -55,3 +55,5 @@ Prerequisites:
 2. https://google.qwiklabs.com/quests/36
 3.https://google.qwiklabs.com/quests/38
 4.https://google.qwiklabs.com/quests/45
+
+dmunn GCP-CA-Notes https://gist.github.com/dmunn/9874418f620b8aaf91d12507a91563ad
