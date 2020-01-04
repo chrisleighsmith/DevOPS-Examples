@@ -10,7 +10,9 @@ QuickGuide https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeex
 Install Minikube on VirtualBox https://github.com/kubernetes/minikube/releahttps://bitbucket.org/StabledOpenSourceConsulting/chrissmith/raw/3979fcefa1bea0fb51afe5ecf91852568a15f3ed/Books/Kubernetes-Cookbook.pdfses
 Kubernetes Cookbook pdf https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/raw/3979fcefa1bea0fb51afe5ecf91852568a15f3ed/Books/Kubernetes-Cookbook.pdf
 
-K8s Certification Handbook: https://training.linuxfoundation.org/wp-content/uploads/2019/11/CKA-CKAD-Candidate-Handbook-v1.6.pdf
+K8s Curriculum and Certification Handbook: 
+https://github.com/cncf/curriculum/blob/master/CKAD_Curriculum_V1.15.0.pdf
+https://training.linuxfoundation.org/wp-content/uploads/2019/11/CKA-CKAD-Candidate-Handbook-v1.6.pdf
 
 OpenStack:
 
