@@ -15,7 +15,7 @@ http://www.kubernet.io/scheduling_cka_1.9.0.html
 Tutorials:
 https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/
 K8s Playground https://labs.play-with-k8s.com/
-
+Troubleshooting Kubernetes Videos Troubleshooting Kubernetes https://subscription.packtpub.com/video/cloud_and_networking/9781788992220/p1/video1_9/scenario-kubernetes-dashboard-loading-is-slow?uuid=92cd1893-1a39-4daa-b12d-99f99bd22fbf
 
 OpenStack:
 
