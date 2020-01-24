@@ -1,8 +1,6 @@
 Training Labs and Tools list
 -----------------------------
 
-/github unsubscribe chrisleighsmith/DevOps-Examples commits
-
 GitHubAPP  11:01 AM
 This channel will get notifications from chrisleighsmith/DevOPS-Examples for: 
 issues, pulls, deployments, statuses, public, releases
