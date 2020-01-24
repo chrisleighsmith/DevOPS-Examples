@@ -1,6 +1,5 @@
 Training Labs and Tools list
 -----------------------------
-Testing slack integration
 
 Kubernetes/Container:
 
