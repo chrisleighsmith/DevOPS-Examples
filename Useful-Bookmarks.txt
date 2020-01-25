@@ -14,6 +14,7 @@ Install 'Docker Tutorial' Mobile App on Android Play Store
 QuickGuide https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeexamples/Docker/example-centos-build.txt
 Install Minikube on VirtualBox https://github.com/kubernetes/minikube/releahttps://bitbucket.org/StabledOpenSourceConsulting/chrissmith/raw/3979fcefa1bea0fb51afe5ecf91852568a15f3ed/Books/Kubernetes-Cookbook.pdfses
 Kubernetes Cookbook pdf https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/raw/3979fcefa1bea0fb51afe5ecf91852568a15f3ed/Books/Kubernetes-Cookbook.pdf
+Free Kubernetes Training https://www.udacity.com/course/scalable-microservices-with-kubernetes--ud615
 
 K8s CKA Study Guide:
 http://www.kubernet.io/scheduling_cka_1.9.0.html
