@@ -18,6 +18,7 @@ Free Kubernetes Training https://www.udacity.com/course/scalable-microservices-w
 
 K8s CKA Study Guide:
 http://www.kubernet.io/scheduling_cka_1.9.0.html
+Security Hardening for Kubenetes Clusters: https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/src/master/Books/CIS_Kubernetes_Benchmark_v1.5.0.pdf
 
 Tutorials:
 https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/
