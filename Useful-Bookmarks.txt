@@ -1,5 +1,7 @@
 Training Labs and Tools list
 -----------------------------
+*Subscribe to Packt Books for Free Books and Video for lifetime of subscription*
+
 
 Kubernetes/Container:
 ------------------------
@@ -7,24 +9,25 @@ https://github.com/kelseyhightower/kubernetes-the-hard-way
 Install 'Docker Tutorial' Mobile App on Android Play Store
 QuickGuide https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeexamples/Docker/example-centos-build.txt
 Install Minikube on VirtualBox https://github.com/kubernetes/minikube/releahttps://bitbucket.org/StabledOpenSourceConsulting/chrissmith/raw/3979fcefa1bea0fb51afe5ecf91852568a15f3ed/Books/Kubernetes-Cookbook.pdfses
-Creating High Available cluster with Kubeadm https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/#before-you-begin`i
+Creating High Available cluster with Kubeadm https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/#before-you-begin
 Use HAProxy to loadbalance etcd pods and have multiple masters (Masters hold cluster config) 
 see http://dockerlabs.collabnix.com/kubernetes/beginners/Install-and-configure-a-multi-master-Kubernetes-cluster-with-kubeadm.html 
 & https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/ha-topology/
-
 Kubernetes Cookbook pdf https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/raw/3979fcefa1bea0fb51afe5ecf91852568a15f3ed/Books/Kubernetes-Cookbook.pdf
+Security Hardening for Kubenetes Clusters: https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/src/master/Books/CIS_Kubernetes_Benchmark_v1.5.0.pdf
 
 Free Kubernetes Training https://www.udacity.com/course/scalable-microservices-with-kubernetes--ud615
-
-K8s CKA Study Guide:
-http://www.kubernet.io/scheduling_cka_1.9.0.html
-Security Hardening for Kubenetes Clusters: https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/src/master/Books/CIS_Kubernetes_Benchmark_v1.5.0.pdf
+K8s CKA Study Guide: http://www.kubernet.io/scheduling_cka_1.9.0.html
 
 Tutorials:
 https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/
 K8s Playground https://labs.play-with-k8s.com/
 Troubleshooting Kubernetes Videos Troubleshooting Kubernetes https://subscription.packtpub.com/video/cloud_and_networking/9781788992220/p1/video1_9/scenario-kubernetes-dashboard-loading-is-slow?uuid=92cd1893-1a39-4daa-b12d-99f99bd22fbf
 Latest Kubernetes news: https://kubernetespodcast.com/episode/087-multitenancy-at-cruise/
+K8s Online Traing Labs: https://www.katacoda.com/courses/kubernetes/getting-started-with-kubeadm
+https://www.safaribooksonline.com/library/view/velocity-2016-/9781491944646/video255624.html
+
+Docker: ttps://www.safaribooksonline.com/learning-paths/learning-path-docker/9781788839389/9781788395069-video1_2
 
 OpenStack:
 https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeexamples/OpenStack/OpenStack-Lab-Rocky-Cluster-Install.txt
@@ -44,7 +47,7 @@ https://www.katacoda.com/learn
 Install Oreilly 'Safari Queue' Mobile Phone App for Books via Android Play Store
 Books: https://bitbucket.org/StabledOpenSourceConsulting/chrissmith/src/4b3b66fb107e117efd109272860f84b098a12a52/Books/?at=master
 ELK https://github.com/calinah/efk-demo?files=1 Elastic Search with Fluent Kabana and Protheus
-
+Terraform: https://www.safaribooksonline.com/library/view/velocity-2016-/9781491944646/video255624.html
 
 Compilations:
 -------------
