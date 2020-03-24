@@ -28,6 +28,7 @@ K8s Online Traing Labs: https://www.katacoda.com/courses/kubernetes/getting-star
 https://www.safaribooksonline.com/library/view/velocity-2016-/9781491944646/video255624.html
 
 Docker: ttps://www.safaribooksonline.com/learning-paths/learning-path-docker/9781788839389/9781788395069-video1_2
+Docker Tips tricks & Techniques video https://subscription.packtpub.com/video/cloud_and_networking/9781839217401
 
 OpenStack:
 https://github.com/chrisleighsmith/DevOPS-Examples/blob/master/codeexamples/OpenStack/OpenStack-Lab-Rocky-Cluster-Install.txt
