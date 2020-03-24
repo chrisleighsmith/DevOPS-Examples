@@ -1,0 +1,6 @@
+ssh/
+*.pem
+*.tfstate.backup
+*.tfstate
+**/.terraform/*
+terraform-provider-aws*
