@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample App</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+    <h1>Hello World</h1>
+    <div>
+        <p>This page has been served by:</p>
+        <div>Version: <span id="app-version">{{version}}</span></div>
+        <div>Hostname: <span id="app-hostname">{{hostname}}</span></div>
+        
+    </div>
+    <hr>
+    <div id="result">
+        <p>Periodically retrieving values from "/data"</p>
+        <div id="meta">
+            <div>Hostname: <span id="hostname"></span></div>
+            <div>Version: <span id="version"></span></div>
+        </div>
+        <div id="data">
+            <div>Value: <span id="value1"></span></div>
+            <div>Value: <span id="value2"></span></div>
+            <div>Value: <span id="value3"></span></div>
+        </div>
+    </div>
+    <div id="error">Errors: <span id="error-number"></span></div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="static/main.js"></script>
+</body>
+</html>

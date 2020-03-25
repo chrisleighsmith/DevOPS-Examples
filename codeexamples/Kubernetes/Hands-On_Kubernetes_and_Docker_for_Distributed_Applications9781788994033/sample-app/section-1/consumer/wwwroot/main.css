@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+h1{
+    font-size: 32pt;
+}
+#connect-bar{
+    display: flex;
+    flex-direction: row;
+}
+#signal{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px black solid;
+}
+.connected {
+    background-color: rgb(0, 255, 0);
+}
+.disconnected {
+    background-color: red;
+}
+button {
+    margin-left: 10px;
+    font-size: 24pt;
+    /* background-color: blue; */
+    /* color: white; */
+}
+
+#dashboard{
+    display: flex;
+    flex-flow: row;
+    margin-top: 10px;
+}
+
+.panel{
+    margin: 5px;
+    border: 1px solid black;
+    background-color: lightcyan;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+}
+
+.label{
+    font-size: 32pt;
+    text-align: center;
+    background-color: aqua;
+}
+
+#nbrOfFrauds{
+    font-size: 72pt;
+    text-align: center;
+}
+
+#output{
+    padding: 5px;
+    font-size: 24pt;
+    text-align: center;
+    overflow-y: auto;
+}

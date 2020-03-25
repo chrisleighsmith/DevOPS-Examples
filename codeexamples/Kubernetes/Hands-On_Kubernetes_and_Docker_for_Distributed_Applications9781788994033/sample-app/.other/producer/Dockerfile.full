@@ -1,0 +1,10 @@
+FROM gradle:4.10.2-jdk11-slim AS builder
+WORKDIR /home/gradle/project
+COPY . /home/gradle/project
+USER root
+RUN gradle build 
+
+FROM openjdk:11-jre-slim
+COPY --from=builder /home/gradle/project/build/libs/app.jar /app/
+COPY --from=builder /home/gradle/project/producer.properties /app/
+CMD java -jar /app/app.jar 

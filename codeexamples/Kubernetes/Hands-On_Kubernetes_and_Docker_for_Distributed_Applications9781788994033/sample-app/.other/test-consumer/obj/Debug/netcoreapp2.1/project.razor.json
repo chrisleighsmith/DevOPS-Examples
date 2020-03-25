@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/Users/gabriel/dev/packt/video-course/src/sample-app/.other/test-consumer/app.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  }
+}

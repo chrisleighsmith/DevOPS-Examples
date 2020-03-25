@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sample
+      service: webapi
+  template:
+    metadata:
+      labels:
+        app: sample
+        service: webapi
+    spec:
+      containers:
+      - image: gnschenker/webapi:1.0
+        name: webapi
+        ports:
+        - containerPort: 5000
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapi
+spec:
+  type: NodePort
+  ports:
+  - port: 5000
+    nodePort: 32224
+  selector:
+    app: sample
+    service: webapi

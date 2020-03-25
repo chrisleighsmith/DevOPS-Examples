@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=900, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebSock Test</title>
+</head>
+<body>
+    <h1>Web Sockets Test App</h1>
+    <button onclick="doConnect()">Connect</button>
+    <label for="input"></label>
+    <input type="text" id="input">
+    <button onclick="onSend()">Send</button>
+    <button onclick="onClose()">Close</button>
+    <div id="output"></div>
+
+    <script language="javascript" type="text/javascript">
+        var socket;
+        var uri = "ws://" + window.location.host + "/ws";
+        var output;
+
+        function write(s) {
+            var p = document.createElement("p");
+            p.innerHTML = s;
+            output.appendChild(p);
+        }
+
+        function doConnect() {
+            socket = new WebSocket(uri);
+            socket.onopen = function (e) { write("opened " + uri); };
+            socket.onclose = function (e) { write("closed"); };
+            socket.onmessage = function (e) { handleMessage(e); };
+            socket.onerror = function (e) { write("Error: " + e.data); };
+        }
+
+        function handleMessage(e){
+            var msg = JSON.parse(e.data);
+            write("Received: " + e.data);
+        }
+
+        function doSend(text) {
+            write("Sending: " + text);
+            socket.send(text);
+        }
+
+        function onInit() {
+            output = document.getElementById("output");
+            // doConnect();
+        }
+
+        function onSend(){
+            var text = document.getElementById("input").value;
+            doSend(text);
+        }
+
+        function onClose(){
+            socket.close();
+            write("closed");
+        }
+
+        window.onload = onInit;
+    </script>
+</body>
+</html>

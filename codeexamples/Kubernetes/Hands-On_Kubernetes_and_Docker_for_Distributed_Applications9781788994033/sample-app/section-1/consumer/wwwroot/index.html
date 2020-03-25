@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=900, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Fraud Detection</title>
+</head>
+<body>
+    <h1>Fraud Detection App</h1>
+    <div id="connect-bar">
+        <div id="signal" class="disconnected"></div>
+        <button id="connect" onclick="doConnect()">Connect</button>
+        <button id="disconnect" onclick="doClose()" hidden="true">Disconnect</button>
+    </div>
+    <div id="dashboard">
+        <div class="panel">
+            <div class="label">Frauds</div>
+            <div id="nbrOfFrauds">0</div>
+        </div>
+        <div class="panel">
+            <div class="label">CC Numbers</div>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

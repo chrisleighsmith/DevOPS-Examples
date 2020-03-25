@@ -1,0 +1,59 @@
+# start kafka
+docker-compose up -d
+
+# exec into `kafka` container
+docker-compose exec kafka /bin/bash
+
+# create topic `cc-authorization-topic`:
+kafka-topics --create \
+    --zookeeper zookeeper:2181 \
+    --partitions 3 \
+    --replication-factor 1 \
+    --topic cc-authorization-topic
+
+# Panel 2: run producer
+docker container run --rm \
+    --net sample-app_app-net \
+    -v "$PWD"/build/libs/app.jar:/app/app.jar \
+    -v "$PWD"/producer.properties:/app/producer.properties \
+    openjdk:11-jre-slim java -jar /app/app.jar 
+
+# Panel 3: configure KSQL Server
+docker-compose exec ksql-cli ksql http://ksql-server:8088
+
+set 'auto.offset.reset'='earliest';
+
+CREATE STREAM cc_authorizations( \
+    credit_card_nbr STRING, \
+    auth_time BIGINT, \
+    status STRING) \
+    WITH(KAFKA_TOPIC='cc-authorization-topic', VALUE_FORMAT='AVRO', KEY='credit_card_nbr');
+
+CREATE TABLE CC_POTENTIAL_FRAUD AS \
+    SELECT credit_card_nbr, COUNT(*) attempts \
+    FROM cc_authorizations \
+    WINDOW TUMBLING (SIZE 3 SECONDS) \
+    WHERE status='FAILED' \
+    GROUP BY credit_card_nbr \
+    HAVING COUNT(*)>=3;
+
+CREATE STREAM CC_POTENTIAL_FRAUD_STREAM (\
+    credit_card_nbr string, attempts bigint) \
+    WITH (kafka_topic='CC_POTENTIAL_FRAUD', value_format='AVRO');
+
+CREATE STREAM CC_POTENTIAL_FRAUD_COUNTS \
+    WITH (PARTITIONS=3,REPLICAS=1) AS \
+    SELECT * FROM CC_POTENTIAL_FRAUD_STREAM WHERE ROWTIME IS NOT NULL;
+
+SELECT * FROM CC_POTENTIAL_FRAUD_COUNTS;
+
+# Panel 4: run the consumer
+docker container run --rm -it \
+    --hostname dotnet \
+    --net sample-app_app-net \
+    -v ${HOME}/.nuget-docker:/root/.nuget \
+    -v $(pwd):/app \
+    -w /app \
+    -p 5000:5000 \
+    microsoft/dotnet:2.1-sdk dotnet run
+

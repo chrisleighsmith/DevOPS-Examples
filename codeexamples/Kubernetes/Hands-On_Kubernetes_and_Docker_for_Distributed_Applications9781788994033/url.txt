@@ -1,0 +1,7 @@
+https://subscription.packtpub.com/video/virtualization_and_cloud/9781788994033
+
+Hands-On Kubernetes and Docker for Distributed Applications
+[Video]
+By Gabriel N. Schenker
+January 2019
+Build, ship and run scalable, resilient, fail-safe and secure distributed applications anywhere using Docker and Kubernetes

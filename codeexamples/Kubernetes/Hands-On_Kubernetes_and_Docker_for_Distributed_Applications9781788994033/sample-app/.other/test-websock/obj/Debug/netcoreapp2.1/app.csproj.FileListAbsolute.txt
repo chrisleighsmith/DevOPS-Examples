@@ -1,0 +1,14 @@
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/bin/Debug/netcoreapp2.1/app.deps.json
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/bin/Debug/netcoreapp2.1/app.runtimeconfig.json
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/bin/Debug/netcoreapp2.1/app.runtimeconfig.dev.json
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/bin/Debug/netcoreapp2.1/app.dll
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/bin/Debug/netcoreapp2.1/app.pdb
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/obj/Debug/netcoreapp2.1/app.csprojAssemblyReference.cache
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/obj/Debug/netcoreapp2.1/app.csproj.CoreCompileInputs.cache
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/obj/Debug/netcoreapp2.1/app.RazorAssemblyInfo.cache
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/obj/Debug/netcoreapp2.1/app.RazorAssemblyInfo.cs
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/obj/Debug/netcoreapp2.1/app.AssemblyInfoInputs.cache
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/obj/Debug/netcoreapp2.1/app.AssemblyInfo.cs
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/obj/Debug/netcoreapp2.1/app.RazorTargetAssemblyInfo.cache
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/obj/Debug/netcoreapp2.1/app.dll
+/Users/gabriel/dev/packt/video-course/src/sample-app/test-websock/obj/Debug/netcoreapp2.1/app.pdb

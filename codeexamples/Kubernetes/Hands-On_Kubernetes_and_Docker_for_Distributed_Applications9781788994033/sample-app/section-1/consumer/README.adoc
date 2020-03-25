@@ -1,0 +1,46 @@
+= .NET Consumer
+
+. Start .NET container:
++
+[source,subs="verbatim,quotes"]
+--
+$ *docker run --rm -it \
+    --hostname dotnet \
+    -v ${HOME}/.nuget-docker:/root/.nuget \
+    -v ${HOME}/.dotnet-docker/tools:/root/.dotnet/tools \
+    -v ${PWD}:/app \
+    -w /app \
+    -p 5000:5000 \
+    --net sample-app_app-net \
+    microsoft/dotnet:2.1-sdk*
+--
+
+. Install the `avrogen` tool:
++
+[source,subs="verbatim,quotes"]
+--
+root@dotnet:/app# *dotnet tool install -g Confluent.Apache.Avro.AvroGen*
+root@dotnet:/app# *export PATH="$PATH:/root/.dotnet/tools"*
+--
+
+. Create the classes from the schemas:
++
+[source,subs="verbatim,quotes"]
+--
+root@dotnet:/app# *avrogen -s FraudKey.avsc .*
+root@dotnet:/app# *avrogen -s FraudValue.avsc .*
+--
+
+. Build consumer:
++
+[source,subs="verbatim,quotes"]
+--
+root@dotnet:/app# *dotnet build*
+--
+
+. Run consumer:
++
+[source,subs="verbatim,quotes"]
+--
+root@dotnet:/app# *dotnet run*
+--

@@ -1,0 +1,9 @@
+{
+    "namespace": "io.confluent.ksql.avro_schemas",
+    "type": "record",
+    "name": "KsqlDataSourceSchema",
+    "fields": [
+        {"name": "CREDIT_CARD_NBR", "type": "string"},
+        {"name": "ATTEMPTS", "type": "long"}
+    ]
+}

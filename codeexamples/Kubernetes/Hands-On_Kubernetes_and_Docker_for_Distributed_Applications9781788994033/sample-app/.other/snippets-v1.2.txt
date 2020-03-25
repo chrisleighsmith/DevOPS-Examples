@@ -1,0 +1,16 @@
+# build the Producer image
+docker image build -t my-producer producer
+
+# Run the producer
+docker run --rm -it \
+    --net sample-app_app-net \
+    my-producer
+
+# build the Consumer image
+docker image build -t my-consumer consumer
+
+# Run the consumer
+docker run --rm -it \
+    --net sample-app_app-net \
+    -p 5000:5000 \
+    my-consumer
