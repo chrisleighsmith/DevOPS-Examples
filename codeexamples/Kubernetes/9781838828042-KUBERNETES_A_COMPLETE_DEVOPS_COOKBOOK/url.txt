@@ -1,0 +1,6 @@
+https://subscription.packtpub.com/book/cloud_and_networking/9781838828042
+
+Kubernetes - A Complete DevOps Cookbook
+By Murat Karslioglu
+March 2020
+
